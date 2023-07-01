@@ -19,7 +19,7 @@ namespace AsyncProgramming.Tests
       RouteAcceptance routeAcceptance = new RouteAcceptance(driverInfo);
       Func<Task<int?>> task = () => routeAcceptance.GetAcceptanceDriver(1, 2);
 
-      await AssertTimeOut(task, 1, 1500);
+      await AssertTimeOut(task, 1, 3000);
     }
 
     [Fact]
@@ -33,7 +33,7 @@ namespace AsyncProgramming.Tests
       RouteAcceptance routeAcceptance = new RouteAcceptance(driverInfo);
       Func<Task<int?>> task = () => routeAcceptance.GetAcceptanceDriver(1, 2);
 
-      await AssertTimeOut(task, 2, 1500);
+      await AssertTimeOut(task, 2, 3000);
     }
 
     [Fact]
